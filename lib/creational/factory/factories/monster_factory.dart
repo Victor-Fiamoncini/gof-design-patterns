@@ -1,6 +1,6 @@
-import 'package:gof_design_patterns/creational/factory/classes/monster.dart';
-import 'package:gof_design_patterns/creational/factory/classes/kraken.dart';
-import 'package:gof_design_patterns/creational/factory/classes/orc.dart';
+import 'package:gof_design_patterns/creational/factory/models/monster.dart';
+import 'package:gof_design_patterns/creational/factory/models/kraken.dart';
+import 'package:gof_design_patterns/creational/factory/models/orc.dart';
 
 class MonsterFactory {
   Monster createMonster(

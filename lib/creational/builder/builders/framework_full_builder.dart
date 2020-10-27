@@ -1,5 +1,5 @@
-import 'package:gof_design_patterns/creational/builder/classes/framework.dart';
-import 'package:gof_design_patterns/creational/builder/classes/ibuilder.dart';
+import 'package:gof_design_patterns/creational/builder/builders/ibuilder.dart';
+import 'package:gof_design_patterns/creational/builder/models/framework.dart';
 
 class FrameworkFullBuilder with IBuilder {
   FrameworkFullBuilder() {

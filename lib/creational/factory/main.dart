@@ -1,4 +1,4 @@
-import 'package:gof_design_patterns/creational/factory/classes/factories/monster_factory.dart';
+import 'package:gof_design_patterns/creational/factory/factories/monster_factory.dart';
 
 void main() {
   final monsterFactory = MonsterFactory();
