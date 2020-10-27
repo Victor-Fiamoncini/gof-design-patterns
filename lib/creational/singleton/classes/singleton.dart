@@ -1,11 +1,20 @@
-class MyCustomSingleton {
-  static MyCustomSingleton _instance;
+class SqlConnection {
+  static SqlConnection _instance;
 
-  static MyCustomSingleton getInstance() {
-    if (MyCustomSingleton._instance == null) {
-      return MyCustomSingleton._instance = MyCustomSingleton();
+  Map<String, dynamic> get databaseConfigs {
+    return {
+      'db_host': 'localhost',
+      'db_name': 'my_database',
+      'db_user': 'root',
+      'db_port': 3306,
+    };
+  }
+
+  static SqlConnection getInstance() {
+    if (SqlConnection._instance == null) {
+      return SqlConnection._instance = SqlConnection();
     }
 
-    return MyCustomSingleton._instance;
+    return SqlConnection._instance;
   }
 }

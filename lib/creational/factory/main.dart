@@ -1,17 +1,16 @@
-import 'package:dart_design_patterns/creational/factory/classes/factories/monster_factory.dart';
-import 'package:dart_design_patterns/creational/factory/classes/monster.dart';
+import 'package:gof_design_patterns/creational/factory/classes/factories/monster_factory.dart';
 
 void main() {
-  final MonsterFactory monsterFactory = MonsterFactory();
+  final monsterFactory = MonsterFactory();
 
-  final Monster kraken = monsterFactory.getMonster(
+  final kraken = monsterFactory.createMonster(
     'Kraken',
     'Green',
     2000,
     false,
   );
 
-  final Monster orc = monsterFactory.getMonster(
+  final orc = monsterFactory.createMonster(
     'Orc',
     'Green',
     2,

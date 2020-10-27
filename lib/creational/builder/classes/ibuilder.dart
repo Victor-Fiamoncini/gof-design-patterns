@@ -1,0 +1,3 @@
+mixin IBuilder {
+  void buildDatabase();
+}

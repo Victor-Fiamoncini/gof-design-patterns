@@ -1,6 +1,6 @@
-import 'package:dart_design_patterns/creational/singleton/classes/singleton.dart';
+import 'package:gof_design_patterns/creational/singleton/classes/singleton.dart';
 
 void main() {
-  print(MyCustomSingleton.getInstance());
-  print(MyCustomSingleton.getInstance());
+  print(SqlConnection.getInstance());
+  print(SqlConnection.getInstance());
 }
