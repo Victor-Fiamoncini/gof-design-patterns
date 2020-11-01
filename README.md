@@ -1,4 +1,4 @@
-# GoF Design Patterns
+# GoF Design Patterns 🏛
 
 Implementations of GoF design patterns, built with dart-lang. Only for study purposes, enjoy.
 
