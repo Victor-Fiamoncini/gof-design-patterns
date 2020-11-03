@@ -1,0 +1,3 @@
+mixin Animal {
+  Animal clone();
+}
