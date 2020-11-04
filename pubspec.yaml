@@ -1,5 +1,6 @@
 name: gof_design_patterns
 version: 1.0.0
+author: Victor B. Fiamoncini
 
 environment:
   sdk: '>=2.10.0 <3.0.0'
