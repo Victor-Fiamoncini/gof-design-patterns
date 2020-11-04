@@ -6,4 +6,6 @@ abstract class Bread {
   String get breadName {
     return name;
   }
+
+  double value();
 }
