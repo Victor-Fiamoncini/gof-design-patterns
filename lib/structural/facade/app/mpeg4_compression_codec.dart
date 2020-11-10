@@ -1,0 +1,1 @@
+class MPEG4CompressionCodec {}
