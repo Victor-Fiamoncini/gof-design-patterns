@@ -1,5 +1,6 @@
 import 'package:gof_design_patterns/structural/bridge/interfaces/workshop.dart';
 
+/// Abstraction
 abstract class Vehicle {
   Vehicle(Workshop firstWorkshop, Workshop secondWorkshop) {
     _firstWorkshop = firstWorkshop;

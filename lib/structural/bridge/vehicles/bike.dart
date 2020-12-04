@@ -1,6 +1,9 @@
+import 'dart:io';
+
 import 'package:gof_design_patterns/structural/bridge/interfaces/vehicle.dart';
 import 'package:gof_design_patterns/structural/bridge/interfaces/workshop.dart';
 
+/// Refined Abstraction
 class Bike extends Vehicle {
   Bike(
     Workshop firstWorkshop,
@@ -9,7 +12,7 @@ class Bike extends Vehicle {
 
   @override
   void manufacture() {
-    print('Bike ');
+    stdout.write('Bike ');
 
     firstWorkshop.work();
     secondWorkshop.work();
