@@ -1,0 +1,3 @@
+mixin Workshop {
+  void work();
+}
