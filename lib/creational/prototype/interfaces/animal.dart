@@ -1,3 +1,0 @@
-mixin Animal {
-  Animal clone();
-}
