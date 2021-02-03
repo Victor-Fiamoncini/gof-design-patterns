@@ -1,0 +1,3 @@
+module gof_design_patterns
+
+go 1.15

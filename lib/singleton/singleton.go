@@ -1,33 +1,38 @@
-package singleton
+package main
 
 import (
 	"fmt"
 	"sync"
 )
 
-var lock = &sync.Mutex{}
+var once sync.Once
 
-type single struct {
+type databaseConnection struct {
+	host     string
+	database string
+	user     string
+	password string
+	port     uint16
 }
 
-var singleInstance *single
+var instance *databaseConnection
 
-func getInstance() *single {
-	if singleInstance == nil {
-		lock.Lock()
-
-		defer lock.Unlock()
-
-		if singleInstance == nil {
+func getInstance(host string, database string, user string, password string, port uint16) *databaseConnection {
+	if instance == nil {
+		once.Do(func() {
 			fmt.Println("Creating a single instance...")
 
-			singleInstance = &single{}
-		} else {
-			fmt.Println("Single instance already created")
-		}
+			instance = &databaseConnection{
+				host:     host,
+				database: database,
+				user:     user,
+				password: password,
+				port:     port,
+			}
+		})
 	} else {
 		fmt.Println("Single instance already created")
 	}
 
-	return singleInstance
+	return instance
 }
