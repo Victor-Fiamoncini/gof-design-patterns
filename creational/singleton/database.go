@@ -7,7 +7,7 @@ import (
 
 var once sync.Once
 
-type DatabaseConnection struct {
+type databaseConnection struct {
 	Host     string
 	Database string
 	User     string
@@ -15,14 +15,14 @@ type DatabaseConnection struct {
 	Port     uint16
 }
 
-var instance *DatabaseConnection
+var instance *databaseConnection
 
-func getInstance(Host string, Database string, User string, Password string, Port uint16) *DatabaseConnection {
+func getInstance(Host string, Database string, User string, Password string, Port uint16) *databaseConnection {
 	if instance == nil {
 		once.Do(func() {
 			fmt.Println("Creating a single instance...")
 
-			instance = &DatabaseConnection{
+			instance = &databaseConnection{
 				Host:     Host,
 				Database: Database,
 				User:     User,
