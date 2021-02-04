@@ -1,23 +1,23 @@
 package main
 
 type pcBuilder struct {
-	builder iPCBuilder
+	Builder iPCBuilder
 }
 
 func newPCBuilder(b iPCBuilder) *pcBuilder {
 	return &pcBuilder{
-		builder: b,
+		Builder: b,
 	}
 }
 
 func (p *pcBuilder) setBuilder(b iPCBuilder) {
-	p.builder = b
+	p.Builder = b
 }
 
 func (p *pcBuilder) buildPC() PC {
-	p.builder.setCPUType()
-	p.builder.setGPUType()
-	p.builder.setRAMQuantity()
+	p.Builder.setCPUType()
+	p.Builder.setGPUType()
+	p.Builder.setRAMQuantity()
 
-	return p.builder.getPC()
+	return p.Builder.getPC()
 }
