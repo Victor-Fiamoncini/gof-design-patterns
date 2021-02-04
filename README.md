@@ -1,8 +1,6 @@
 # GoF Design Patterns 🏛
 
-Implementations/examples of GoF design patterns. Only for study purposes, enjoy.
-
-In progress...
+Implementations/examples of some GoF design patterns. Only for study purposes, enjoy.
 
 ----------
 Released in 2020.
