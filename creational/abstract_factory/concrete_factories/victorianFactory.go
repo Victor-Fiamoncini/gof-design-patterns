@@ -19,4 +19,11 @@ func (vf *VictorianFactory) CreateChair(material string, hashLegs bool) am.IChai
 }
 
 // CreateSofa VictorianFactory method
-func (vf *VictorianFactory) CreateSofa() {}
+func (vf *VictorianFactory) CreateSofa(material string, numberOfCushions uint16) am.ISofa {
+	return &cm.VictorianSofa{
+		Sofa: am.Sofa{
+			Material:         material,
+			NumberOfCushions: numberOfCushions,
+		},
+	}
+}

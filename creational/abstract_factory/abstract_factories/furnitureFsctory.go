@@ -7,13 +7,14 @@ import (
 	cf "github.com/Victor-Fiamoncini/gof_design_patterns/creational/abstract_factory/concrete_factories"
 )
 
-type iFurnitureFactory interface {
+// IFurnitureFactory interface
+type IFurnitureFactory interface {
 	CreateChair(material string, hashLegs bool) am.IChair
-	CreateSofa()
+	CreateSofa(material string, numberOfCushions uint16) am.ISofa
 }
 
 // GetFurnitureFactory func
-func GetFurnitureFactory(furnitureFactoryType string) (iFurnitureFactory, error) {
+func GetFurnitureFactory(furnitureFactoryType string) (IFurnitureFactory, error) {
 	if furnitureFactoryType == "victorian" {
 		return &cf.VictorianFactory{}, nil
 	}
